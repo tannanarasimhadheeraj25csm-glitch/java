@@ -5,7 +5,7 @@ public class Constructor{
     public Constructor(){
         x=10;
         y=20.5f;
-        z="hello";
+        z="hii";
     }
     public static void main(String[]args){
         Constructor c=new Constructor();
