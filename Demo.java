@@ -1,6 +1,6 @@
 public class Demo{
     public void inputs(){
-        System.out.println("hello");
+        System.out.println("hello!!");
     }
     public void display(int x,int y){
         System.out.println(x+y);
