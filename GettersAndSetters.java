@@ -3,8 +3,8 @@ package core  ;
 class d {
 	private int a;
 	private float f;
-	private	String b;
-	private	char c;
+	String b;
+	char c;
 	public int getA() {
 	return a;
 	}
