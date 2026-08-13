@@ -1,1 +1,91 @@
+package problems;
 
+class Account {
+	double num;
+	float bal;
+    String type;
+	   Account(double num, float bal, String acc_type) {
+		   this.num = num;
+		   this.bal = bal;
+		   this.type = acc_type;
+	   }
+	   void deposit (double money) {
+		   bal += money;
+		   System.out.println("deposited successfully : " +money);
+		   System.out.println("total balance is : " +bal);
+	   }
+	   void withdraw (int amount) {
+		   if (amount <= bal
+				   && amount > 0) {
+			   bal -= amount;
+			   System.out.println("withdrawl amount is : " +amount);
+			   System.out.println("total balance is : " +bal);
+		   }
+	   }
+	   
+		   void transfer (int amount, Account acc_to_transfer) {
+			 if (amount <= bal && amount > 0) {
+				 bal -= amount;
+				 acc_to_transfer.bal += amount;
+				 System.out.println("amount transferred is : " +amount);
+				 System.out.println("amount transferred to acc_to_transfer successfully");
+		   }
+	   }
+		   void DisplayAccount () {
+			   System.out.println("displaying account details ");
+			   System.out.println("account number : " +num);
+			   System.out.println("account type : " +type);
+			   System.out.println("total bank balance : " +bal);
+		   }
+}
+class SavingsAccount extends Account {
+private float InterestRate;
+SavingsAccount (double num, float bal, float InterestRate, String type) {
+	super(num, bal, type);
+	this.InterestRate = InterestRate;
+}
+void CalculteInterest () {
+	float Interest =  (float) (bal * InterestRate / 100);
+	bal += Interest;
+	System.out.println("interest amount is : " +Interest);
+	System.out.println("total balance is : " +bal);
+}
+}
+class CurrentAccount extends Account {
+private float OverDraft;
+CurrentAccount(double num, float bal, float OverDraft, String type) {
+	super(num, bal, type);
+	this.OverDraft = OverDraft;
+}
+void Withdrawl (int amount) {
+	if (amount > 0 && amount <= bal + OverDraft) {
+		bal -= amount;
+		System.out.println(+amount+ " withdrawl successfully ");
+	} else {
+		System.out.println("exceeds overdraft limit");
+	}
+}
+void displayoverdraftlimit() {
+	System.out.println("overdraft limit : " +OverDraft);
+}
+}
+public class BankManagementSystem {
+	public static void main(String[] args) {
+		SavingsAccount sav = new SavingsAccount(132308, 1000, 10, null);
+		CurrentAccount curr = new CurrentAccount(231308, 2000, 10000, null);
+		sav.DisplayAccount();
+		curr.DisplayAccount();
+		System.out.println("deposit :");
+		sav.deposit(2000);
+		System.out.println("withdrawl :");
+		sav.withdraw(4000);
+		System.out.println("transfer :");
+		sav.transfer(3000, curr);
+		System.out.println("withdrawl from current account : ");
+		curr.Withdrawl(200);
+		System.out.println("final details");
+		sav.DisplayAccount();
+		curr.DisplayAccount();
+		curr.displayoverdraftlimit();
+	}
+	}
