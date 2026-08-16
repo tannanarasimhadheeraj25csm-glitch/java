@@ -1,1 +1,55 @@
 
+package javacore;
+
+class Cow {
+	void  stay() {
+		  System.out.println("cow stays in shed");
+	}
+	void eat() {
+		 System.out.println("cow eats grass");
+	}
+	void sound () {
+		System.out.println("cow sounds ambbhaaa");
+	}
+}
+class Pig {
+	void stay() {
+		System.out.println("pig stays at wet mud");
+	}
+	void eat() {
+	    System.out.println("pig eats waste");	
+	}
+	void sound () {
+		System.out.println("pig sounds oink");
+	}
+}
+class horse {
+	void stay () {
+		 System.out.println("horse stays in  stables");
+	}
+	void eat() {
+		 System.out.println("horse eats grass");
+	}
+	void sound () {
+		System.out.println("horse sounds neigh");
+	}
+}
+
+
+public class FarmAnimals {
+	public static void main(String[] args) {
+		Cow c = new Cow();
+		c.eat();
+		c.stay();
+		c.sound();
+		Pig p = new Pig();
+		p.eat();
+		p.stay();
+		p.sound();
+		horse h = new horse();
+		h.eat();
+		h.stay();
+		h.sound();
+	}
+
+}
