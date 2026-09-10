@@ -1,1 +1,26 @@
+package assignments;
+
+
+class Boy {
+	void show() {
+	String male = "ABC";
+	int age = 18;
+	System.out.println("name and age is : " +male +" "+age);
+	}
+}
+class Girl extends Boy {
+	void prt () {
+		String name = "abc";
+		int age = 18;
+		System.out.println("name and age is : " +name +" "+age);
+	}
+}
+
+public class SingleInheritance {
+public static void main(String[] args) {
+	Girl g = new Girl ();
+	g.show();
+	g.prt();
+}
+}
 
