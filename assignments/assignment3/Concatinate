@@ -1,1 +1,17 @@
+package assignment3;
+class Demo
+{
+    void sample()
+    {
+        String s="narasimha";
+        String n="dheeraj";
 
+        System.out.println("Concanation is :  "+s.concat(n));
+    }
+}
+public class Concatinate {
+    public static void main(String[] args) {
+        Demo d=new Demo();
+        d.sample();
+    }
+}
