@@ -1,1 +1,16 @@
+package assignment3;
+class Demo
+{
+    void sample()
+    {
+        String s="Avits";
 
+        System.out.println("After replacing: "+s.replace('v', 'n'));
+    }
+}
+public class Replace {
+    public static void main(String[] args) {
+        Demo d=new Demo();
+        d.sample();
+    }
+}
