@@ -1,1 +1,17 @@
+package assignment3;
+class Demo 
+{
+    void sample()
+    {
+        String s="dheeraj";
+        String n="DHEERAJ";
 
+        System.out.println("Is equal or not: "+s.equalsIgnoreCase(n));
+    }
+}
+public class EqualIgnoranceCase {
+    public static void main(String[] args) {
+        Demo d=new Demo();
+        d.sample();
+    }
+}
